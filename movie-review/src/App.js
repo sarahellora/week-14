@@ -7,7 +7,7 @@ function App() {
   const movies=[{
     title:"bob the builder",
     review:"this movie was teriblle",
-    rating: 4
+    stars: 4
 }]    
   return (
     <div className="App">
