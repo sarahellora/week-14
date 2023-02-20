@@ -6,8 +6,9 @@ const MovieList = (props) => {
   
 return (
     <div>
-        <Movie/>
+        <Movie movies={props.movies}/>
 
-    </div>)
+    </div>
+    )
 }
 export default MovieList
