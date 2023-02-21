@@ -3,11 +3,10 @@ import { FaStar } from 'react-icons/fa';
 
 
 const Stars = (props) => {
-    console.log(props)
 const numberOfStars= [...Array(props.stars).keys()]
 return (
     <div>
-        <h3>{numberOfStars.map((index)=> <FaStar key={index} />)}</h3>
+        <h3>{numberOfStars.map((index)=> <FaStar key={index+'faStar'} />)}</h3>
     </div>)
 }
 export default Stars

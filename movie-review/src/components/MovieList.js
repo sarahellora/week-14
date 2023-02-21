@@ -6,10 +6,10 @@ const MovieList = (props) => {
 
     return (
     <div className='movieContainer'>
-        { props.movies.map((movie) =>
-        <div>
-                <Movie title={movie.title} image={movie.image} review={movie.review}/>
-                <Stars stars={movie.stars}/>
+        { props.movies.map((movie, index) =>
+        <div key={index+'movieDiv'}>
+                <Movie title={movie.title} index={index} image={movie.image} review={movie.review}/>
+                <Stars stars={movie.stars} index={index}/>
         </div>       
          )}
     </div>

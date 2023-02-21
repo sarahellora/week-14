@@ -5,7 +5,7 @@ const ReviewList = (props) => {
 return (
     <div >
         <ReviewForm addReview={props.addReview}/>
-            </div>
+    </div>
     )
 }
 export default ReviewList
