@@ -23,7 +23,6 @@ function App() {
 }]  )
 function addReview(e,title,image,review,stars){
   e.preventDefault()
-  console.log('testing')
   setMovies([...movies,{
     title:title,
     image:image,
