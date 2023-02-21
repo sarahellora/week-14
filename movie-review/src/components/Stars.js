@@ -3,6 +3,7 @@ import { FaStar } from 'react-icons/fa';
 
 
 const Stars = (props) => {
+    console.log(props)
 const numberOfStars= [...Array(props.stars).keys()]
 return (
     <div>

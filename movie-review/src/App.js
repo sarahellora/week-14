@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import MovieList from './components/MovieList';
-
+import ReviewList from './components/ReviewList'
+import {useState} from 'react'
 function App() {
 
-  const movies=[{
+  const [movies,setMovies]=useState([{
     title:"Toy Story",
     image:"https://flxt.tmsimg.com/assets/p17420_p_v12_bc.jpg",
     review:"this movie was teriblle",
@@ -19,10 +20,21 @@ function App() {
   image:"https://lumiere-a.akamaihd.net/v1/images/p_toystory3_19639_3c584e1f.jpeg",
   review:"this movie was teriblle",
   stars: 1
-}]    
+}]  )
+function addReview(e,title,image,review,stars){
+  e.preventDefault()
+  console.log('testing')
+  setMovies([...movies,{
+    title:title,
+    image:image,
+    review:review,
+    stars:parseInt(stars)
+  }])
+}
   return (
     <div className="App">
       <MovieList movies={movies}/>
+      <ReviewList addReview={addReview}/>
     </div>
   );
 }
